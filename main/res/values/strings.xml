@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sondeln 2.0</string>
+    <string name="title_activity_all__finding__map">Map</string>
+    <string name="title_activity_overlay_map">Map</string>
+</resources>

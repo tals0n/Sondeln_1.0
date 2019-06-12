@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/button"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="de.tali.sondeln20.Create_Finding_Window">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name : "
+        android:id="@+id/txt_name"
+        style="@style/tvStyle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edit_name"
+        android:layout_below="@+id/txt_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Longitude :"
+        style="@style/tvStyle"
+        android:id="@+id/txt_longitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edit_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Latitude :"
+        style="@style/tvStyle"
+        android:id="@+id/txt_latitude"
+        android:layout_below="@+id/txt_longitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Position neu bestimmen"
+        android:id="@+id/btn_update"
+        style="@style/buttonStyle"
+        android:onClick="refresh_position"
+        android:layout_below="@+id/txt_latitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/edit_name"
+        android:layout_alignEnd="@+id/edit_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto aus Gallerie"
+        android:id="@+id/btn_photo"
+        style="@style/buttonStyle"
+        android:onClick="open_photo_gallery"
+        android:layout_below="@+id/btn_update"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btn_update"
+        android:layout_alignEnd="@+id/btn_update" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speichern"
+        style="@style/buttonStyle"
+        android:id="@+id/btn_save"
+        android:onClick="finding_save"
+        android:layout_below="@+id/btn_camera_photo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btn_camera_photo"
+        android:layout_alignEnd="@+id/btn_camera_photo" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btn_save" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto mit Kamera"
+        style="@style/buttonStyle"
+        android:id="@+id/btn_camera_photo"
+        android:onClick="take_pic"
+        android:layout_below="@+id/btn_photo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btn_photo"
+        android:layout_alignEnd="@+id/btn_photo" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only GPS"
+        android:id="@+id/switch1"
+        android:layout_alignBottom="@+id/txt_name"
+        android:layout_alignRight="@+id/txt_name"
+        android:layout_alignEnd="@+id/txt_name"
+        android:checked="true" />
+
+</RelativeLayout>
